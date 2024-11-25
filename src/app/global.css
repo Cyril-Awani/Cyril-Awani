@@ -1,0 +1,61 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono&family=Poppins:wght@300;400;500;700;800&display=swap');
+
+/* Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Default CSS */
+:root {
+  --bg: #fff;
+  --txt: #2c282d;
+  --btn: #88159d;
+  --hvrbg: #9d3aaf;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: var(--bg);
+  color: var(--txt); /* Make sure this variable is defined */
+  font-family: 'Poppins', sans-serif; /* Apply Poppins as the default font */
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Remove number input arrows in Firefox */
+input[type='number'] {
+  -moz-appearance: textfield; /* For Firefox */
+}
+
+/* Remove number input arrows in Webkit-based browsers (Chrome, Safari, Edge, Opera) */
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Safari and Chrome */
+}
+
+.scrollbar-hide {
+  overflow: hidden; /* Prevent content overflow, keep only horizontal scrolling */
+  overflow-x: auto; /* Enable horizontal scrolling */
+}
+
+/* Apply DM Mono font for specific elements, e.g., code blocks or specific text */
+code, pre {
+  font-family: 'DM Mono', monospace; /* Apply DM Mono where needed */
+}
